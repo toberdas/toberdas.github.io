@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>spirals game</title>
+	<link href="../style.css" rel="stylesheet" type="text/css" media="all">
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="../games/spirals/spirals_sketch.js"></script>
+	<script src="../dropdown.js"></script>
+</head>
+
+<body>
+	<main>
+		<div class="navbar">
+			<a href="index.html">Home</a>
+			<a href="spirals.html">Spirals</a>
+			<a href="speedrunner.html">Speedrunner</a>
+			<a href="capitals.html">Capitals</a>
+			<a href="collagegallery.html"> Collages</a>
+		</div>
+		<div class="maingrid">
+			<div class="game">
+				<h2 id="gametitle">spirals
+					<div>
+						<button class="game-info-button" onclick="dropdown()">[info]</button>
+						<p class="dropdown-info" id="myDropdown">Click to start drawing. Select variables by their corresponding hotkey (between brackets []). Further hit 'z' to randomize line color, 'x' to randomize background color, 'c' to randomize line movement, 'v' to randomize everything and Backspace to erase your current drawing. Have fun drawing!</p>
+					</div>
+				</h2>
+				<div id="spiralflex">
+					<div id="sliderholder"></div>
+					<div id="gameholder" ></div>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+
+*{
+  font-family: sans-serif;
+}
+
+body {
+  background-color: rgb(230, 121, 121);
+  color: black;
+  font-family: Verdana;
+}
+
+.navbar{
+  top: 5%;
+  right: 5%;
+  position: fixed;
+  background-color: rgba(153, 168, 86, 0.325);
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.navbar a{
+  min-width: 64px;
+  color: black;
+  text-decoration: none;
+  background-color: rgb(153, 168, 86);
+  border: 2px rgb(220, 90, 90) solid;
+  margin: 0%;
+  padding: 10px;
+}
+
+.navbar a:hover{
+  box-shadow: inset 2px 2px rgb(185, 76, 76);
+}
+
+.navbar a:active{
+  box-shadow: inset 4px 4px rgb(185, 76, 76);
+}
+
+.maingrid{
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+.game{
+  margin: auto;
+  background-color: blueviolet;
+}
+
+#gametitle{
+  text-align: center;
+}
+
+.game-info-button{
+  position: fixed;
+  margin: auto;
+  color:brown;
+  background-color: blue;
+}
+
+#gameholder{
+  margin: 20px;
+  padding: 6px;
+}
+
+#spiralflex{
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  font-size: 0.8em;
+}
+
+#sliderholder{
+  max-height: 90%;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;;
+}
+
+.title-dropdown{
+  display: inline-block;
+  overflow: hidden;
+}
+
+.dropdown-info{
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  max-width: 90%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+
+}
+
+.show {
+  display: block;
+}

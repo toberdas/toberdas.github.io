@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>capitals!</title>
+	<link href="../style.css" rel="stylesheet" type="text/css" media="all">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../tools/capitals/capitals.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="spirals.html">Spirals/a>
+        <a href="speedrunner.html">Speedrunner</a>
+        <a href="capitals.html">Capitals</a>
+        <a href="collagegallery.html"> Collages</a>
+    </div>
+    <div class="maingrid"></div>
+        <form >
+            <input type="radio" id="royal-ms.I.C.VII" name="capitals-style" value="royal-ms.I.C.VII" checked="checked">
+            <label for="royal-ms.I.C.VII">Royal Library ms.I.C.VII</label><br>
+            <input type="radio" id="fust-schoiffoers" name="capitals-style" value="fust-schoiffoers">
+            <label for="fust-schoiffoers">Fust and Schoiffoers</label><br>
+            <input type="radio" id="lansdowne-ms-451" name="capitals-style" value="lansdowne-ms-451">
+            <label for="lansdowne-ms-451">Lansdowne ms. 451.</label><br>
+            <input type="radio" id="summa-bartholomaei" name="capitals-style" value="summa-bartholomaei">
+            <label for="summa-bartholomaei">Summa Bartholomaei</label><br>
+            <input type="radio" id="pontificale-john-II" name="capitals-style" value="pontificale-john-II">
+            <label for="pontificale-john-II">Pontificale John II</label><br>
+            <input type="radio" id="ms-rouen" name="capitals-style" value="ms-rouen">
+            <label for="ms-rouen">MS. Rouen</label><br>
+            <input type="radio" id="benedictionale-w-maskell" name="capitals-style" value="benedictionale-w-maskell">
+            <label for="benedictionale-w-maskell">Benedictionale W Maskell</label><br>
+            <input type="radio" id="ms-hanrott" name="capitals-style" value="ms-hanrott">
+            <label for="ms-hanrott">MS. Hanrott</label><br>
+            <input type="radio" id="fifteenth-century-1" name="capitals-style" value="fifteenth-century-1">
+            <label for="fifteenth-century-1">Fifteenth Century 1</label><br>
+            <input type="radio" id="fifteenth-century-2" name="capitals-style" value="fifteenth-century-2">
+            <label for="fifteenth-century-2">Fifteenth Century 2</label>
+          </form>
+        <input type="text" id="inputText" value="Enter text to translate here">
+        <button type="button" onclick="onTranslateClick()">Translate</button>
+        <canvas id="canvas"></canvas>
+</body>
+</html>
