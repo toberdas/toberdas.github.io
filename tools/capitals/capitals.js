@@ -4,7 +4,7 @@ var drawArray = [];
 function onTranslateClick(){
     var url = window.location.href;
     let style = document.querySelector('input[name="capitals-style"]:checked').value;
-    let newurl = url.replace("html/capitals.html", "tools/capitals/pngfiles/" + style)
+    let newurl = url.replace("html/capitals", "tools/capitals/pngfiles/" + style)
     loadImages(newurl)
 
 }
