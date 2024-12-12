@@ -10,8 +10,8 @@ body {
 }
 
 .navbar{
-  top: 5%;
-  right: 5%;
+  top: 1%;
+  right: 1%;
   position: fixed;
   display: flex;
   justify-content: flex-end;
