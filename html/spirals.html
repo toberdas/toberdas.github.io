@@ -21,17 +21,17 @@
 			<a href="capitals.html">Capitals</a>
 			<a href="collagegallery.html"> Collages</a>
 		  </div>
+		<div>
+			<button class="game-info-button" onclick="dropdown()">[info]</button>
+			<p class="dropdown-info" id="myDropdown">Click to start drawing. Select variables by their corresponding hotkey (between brackets []). Further hit 'z' to randomize line color, 'x' to randomize background color, 'c' to randomize line movement, 'v' to randomize everything and Backspace to erase your current drawing. Have fun drawing!</p>
+		</div>
 		<div class="maingrid">
 			<div class="game">
 				<h2 id="gametitle">spirals
-					<div>
-						<button class="game-info-button" onclick="dropdown()">[info]</button>
-						<p class="dropdown-info" id="myDropdown">Click to start drawing. Select variables by their corresponding hotkey (between brackets []). Further hit 'z' to randomize line color, 'x' to randomize background color, 'c' to randomize line movement, 'v' to randomize everything and Backspace to erase your current drawing. Have fun drawing!</p>
-					</div>
 				</h2>
 				<div id="spiralflex">
-					<div id="sliderholder"></div>
 					<div id="gameholder" ></div>
+					<div id="sliderholder" class="six-columns"></div>
 				</div>
 			</div>
 		</div>

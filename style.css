@@ -5,7 +5,7 @@
 
 body {
   background-color: rgb(248, 243, 202);
-  color: black;
+  color: rgb(26, 25, 25);
   font-family: Verdana;
 }
 
@@ -41,12 +41,14 @@ body {
 .maingrid{
   display: grid;
   align-content: center;
-  justify-items: baseline;
+  justify-items: center;
 }
 
 .game{
-  margin: auto;
   background-color: blueviolet;
+  border-radius: 1px;
+  display: flex;
+  flex-direction: column;
 }
 
 #gametitle{
@@ -55,7 +57,7 @@ body {
 
 .game-info-button{
   position: fixed;
-  margin: auto;
+  margin: 1px;
   color:brown;
   background-color: blue;
 }
@@ -66,19 +68,16 @@ body {
 }
 
 #spiralflex{
-  align-content: center;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   display: flex;
   font-size: 0.8em;
 }
 
-#sliderholder{
+/* #sliderholder{
   max-height: 90%;
-  justify-content: space-around;
-  display: flex;
-  flex-direction: column;
   margin: 10px;;
-}
+} */
 
 .title-dropdown{
   display: inline-block;
@@ -98,4 +97,33 @@ body {
 
 .show {
   display: block;
+}
+
+.flex-column{
+  display: flex;
+  flex-direction: column;
+}
+
+.three-columns{
+  column-count: 3;
+}
+
+.six-columns{
+  column-count: 6;
+}
+
+.grid{
+  display: grid;
+}
+
+.padding-md{
+  padding: 16px;
+}
+
+.min-height-lg{
+  min-height: 48px;
+}
+
+.min-height-sm{
+  min-height: 12px;
 }

@@ -76,32 +76,26 @@ function draw() {
 		pointY += cos(theta) * rad;
 	}
 	
-	if (mouseX > -100 && mouseX < canvas.width + 100 && mouseY > -100 && mouseY < canvas.height + 100){
+	if (mouseInFrame()){
 		if (updateFrame == updateDelay){
 			pointX += (mouseX - pointX) / mouseFollow[0];
 			pointY += (mouseY - pointY) / mouseFollow[0];
 		}
 		
 			if (mouseIsPressed == true){
-				if (mouseX < sliderOffsetMax + 90 && slidersVisible == 1){
-					mouseReleased()
+				if (currentArray.length > maxArrayLength){
+					currentArray.pop();
 				}
-				else{
-					if (currentArray.length > maxArrayLength){
-						currentArray.pop();
-					}
-					
-					currentArray.unshift(
-					[pointX,
-					pointY, 
-					lineThickness[0], 
-					redValue[0], 
-					greenValue[0], 
-					blueValue[0]]);
-					drawSpiralBuffer();
-				}
+				
+				currentArray.unshift(
+				[pointX,
+				pointY, 
+				lineThickness[0], 
+				redValue[0], 
+				greenValue[0], 
+				blueValue[0]]);
+				drawSpiralBuffer();
 			}
-		
 	}
 
 	if (updateFrame == updateDelay){
@@ -123,15 +117,23 @@ function draw() {
 	image(spiralBuffer,0,0);
 }
 
+function mouseInFrame(){
+	if (mouseX > 0 && mouseX < canvas.width && mouseY > 0 && mouseY < canvas.height){
+		return true;
+	} else{
+		return false;
+	}
+}
+
 function mouseReleased(){
 	currentArray.length = 0;
 }
 
 function keyPressed() {
 	if (keyCode === ENTER){
-			for (i=0;i<sliderArray.length;i++){
-				sliderArray[i].value(random(variableArray[i][2], variableArray[i][3]));
-			}
+		for (i=0;i<sliderArray.length;i++){
+			sliderArray[i].value(random(variableArray[i][2], variableArray[i][3]));
+		}
 	}
 	if (keyCode === SHIFT){
 		slidersVisible = 1 - slidersVisible;
@@ -173,8 +175,12 @@ function keyTyped() {
 }
 
 function mouseWheel(event) {
-	sliderArray[activeVariable].value(sliderArray[activeVariable].value() + event.delta / 100);
-	return false;
+	if (mouseInFrame()){
+		sliderArray[activeVariable].value(sliderArray[activeVariable].value() + event.delta);
+		return false;
+	} else{
+		return true;
+	}
 }
 
 function drawSpiralBuffer(){
@@ -186,17 +192,17 @@ function drawBackgroundBuffer(){
 	for (i=0;i<variableArray.length;i++){
 		variableArray[i][1] = sliderArray[i].value();
 		// sliderArray[i].position(sliderOffset,sliderTopOffset + 10 + i * sliderYMargin)
-		if (i == activeVariable){
-			backgroundBuffer.strokeWeight(0);
-			backgroundBuffer.textSize(13);
-			backgroundBuffer.textStyle(BOLD);
-		}
-		else{
-			backgroundBuffer.strokeWeight(0);
-			backgroundBuffer.textSize(12);
-			backgroundBuffer.textStyle(NORMAL);
-		}
-		backgroundBuffer.text(variableArray[i][4]+" ["+variableArray[i][5]+"]",sliderOffset,sliderTopOffset + i * sliderYMargin);
+		// if (i == activeVariable){
+		// 	backgroundBuffer.strokeWeight(0);
+		// 	backgroundBuffer.textSize(13);
+		// 	backgroundBuffer.textStyle(BOLD);
+		// }
+		// else{
+		// 	backgroundBuffer.strokeWeight(0);
+		// 	backgroundBuffer.textSize(12);
+		// 	backgroundBuffer.textStyle(NORMAL);
+		// }
+		// backgroundBuffer.text(variableArray[i][4]+" ["+variableArray[i][5]+"]",sliderOffset,sliderTopOffset + i * sliderYMargin);
 		variableArray[i][0] += (variableArray[i][1] - variableArray[i][0]) / 36;
 	}
 	backgroundBuffer.stroke(redValue[0],

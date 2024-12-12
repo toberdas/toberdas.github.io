@@ -17,7 +17,8 @@
         <a href="collagegallery.html"> Collages</a>
       </div>
     <div class="maingrid">
-        <form >
+      <div class="game flex-column padding-md">
+        <form>
             <input type="radio" id="royal-ms.I.C.VII" name="capitals-style" value="royal-ms.I.C.VII" checked="checked">
             <label for="royal-ms.I.C.VII">Royal Library ms.I.C.VII</label><br>
             <input type="radio" id="fust-schoiffoers" name="capitals-style" value="fust-schoiffoers">
@@ -39,9 +40,14 @@
             <input type="radio" id="fifteenth-century-2" name="capitals-style" value="fifteenth-century-2">
             <label for="fifteenth-century-2">Fifteenth Century 2</label>
           </form>
-        <input type="text" id="inputText" value="Enter text to translate here">
+        <div class="min-height-sm"></div>
+        <input type="text" id="inputText" placeholder="Enter text to translate here">
+        <div class="min-height-sm"></div>
         <button type="button" onclick="onTranslateClick()">Translate</button>
-        <canvas id="canvas"></canvas>
+      </div>
+      <div class="min-height-lg"></div>
+      <canvas id="canvas"></canvas>
   </div>
+  
 </body>
 </html>
