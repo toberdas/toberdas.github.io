@@ -41,7 +41,7 @@ body {
 .maingrid{
   display: grid;
   align-content: center;
-  justify-content: center;
+  justify-items: baseline;
 }
 
 .game{
